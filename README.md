@@ -4,7 +4,7 @@ mackerel-plugin-mysqlrouter
 
 Usage
 -----
-1. Download binary from release page and put to `/usr/local/bin`
+1. Download binary from [release page](https://github.com/rluisr/mackerel-plugin-mysqlrouter/releases) and put to `/usr/local/bin`
 2. Edit mackerel-agent.conf then restart.
 ```
 [plugin.metrics.mysqlrouter]
@@ -13,7 +13,11 @@ command = "MYSQLROUTER_URL=http://localhost:8080 MYSQLROUTER_USER=luis MYSQLROUT
 
 FYI
 ---
+You should set alert of health per route like below.
 
+![](https://raw.githubusercontent.com/rluisr/image-store/master/mackerel-plugin-mysqlrouter/mackerel-plugin-mysqlrouter01.png)
+
+This `0.1` is no meaning. If route is no heath return `0`.
 
 Todo
 ----
