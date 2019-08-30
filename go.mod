@@ -1,4 +1,4 @@
-module github.com/rluisr/mackerel-plugin-mackerel
+module github.com/rluisr/mackerel-plugin-mysqlrouter
 
 go 1.12
 
