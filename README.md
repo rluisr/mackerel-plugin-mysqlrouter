@@ -8,7 +8,8 @@ Usage
 2. Edit mackerel-agent.conf then restart.
 ```
 [plugin.metrics.mysqlrouter]
-command = "MYSQLROUTER_URL=http://localhost:8080 MYSQLROUTER_USER=luis MYSQLROUTER_PASS=luis /usr/local/bin/mackerel-plugin-mysqlrouter"
+command = ["/usr/local/bin/mackerel-plugin-mysqlrouter"]
+env = { MYSQLROUTER_URL = "http://localhost:8080", MYSQLROUTER_USER = "luis", MYSQLROUTER_PASS = "luis" }
 ```
 
 FYI
