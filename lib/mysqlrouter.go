@@ -107,7 +107,6 @@ func Do() {
 	}
 
 	prefix := flag.String("metric-key-prefix", "", "Metric key prefix")
-	temp := flag.String("tempfile", "", "Temp file name")
 	flag.Parse()
 
 	mr := MRPlugin{
@@ -118,6 +117,5 @@ func Do() {
 	mr.Prepare()
 
 	plugin := mp.NewMackerelPlugin(mr)
-	plugin.Tempfile = *temp
 	plugin.Run()
 }
