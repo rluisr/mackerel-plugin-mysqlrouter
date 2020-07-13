@@ -2,10 +2,15 @@ mackerel-plugin-mysqlrouter
 ============================
 [![Build Status](https://cloud.drone.io/api/badges/rluisr/mysqlrouter_exporter/status.svg)](https://cloud.drone.io/rluisr/mysqlrouter_exporter)
 
+Supported version
+-----------------
+check [here](https://github.com/rluisr/mysqlrouter-go#supported-version)
+
 Usage
 -----
-1. Download binary from [release page](https://github.com/rluisr/mackerel-plugin-mysqlrouter/releases) and put to `/usr/local/bin`
-2. Edit mackerel-agent.conf then restart.
+1. Enable REST API on MySQL Router [here](https://github.com/rluisr/mysqlrouter-go#supported-version)
+2. Download binary from [release page](https://github.com/rluisr/mackerel-plugin-mysqlrouter/releases) and put to `/usr/local/bin`
+3. Edit mackerel-agent.conf then restart.
 ```
 [plugin.metrics.mysqlrouter]
 command = ["/usr/local/bin/mackerel-plugin-mysqlrouter"]
