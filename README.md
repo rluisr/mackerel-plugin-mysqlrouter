@@ -14,7 +14,7 @@ Usage
 ```
 [plugin.metrics.mysqlrouter]
 command = ["/usr/local/bin/mackerel-plugin-mysqlrouter"]
-env = { MYSQLROUTER_URL = "http://localhost:8080", MYSQLROUTER_USER = "luis", MYSQLROUTER_PASS = "luis" }
+env = { MYSQLROUTER_URL = "http://localhost:8080", MYSQLROUTER_USER = "luis", MYSQLROUTER_PASS = "luis", MYSQLROUTER_TLS_SKIP_VERIFY = "true" }
 ```
 
 FYI
