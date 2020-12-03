@@ -9,10 +9,11 @@ import (
 )
 
 var (
-	url      = os.Getenv("MYSQLROUTER_URL")
-	user     = os.Getenv("MYSQLROUTER_USER")
-	pass     = os.Getenv("MYSQLROUTER_PASS")
-	graphdef map[string]mp.Graphs
+	url           = os.Getenv("MYSQLROUTER_URL")
+	user          = os.Getenv("MYSQLROUTER_USER")
+	pass          = os.Getenv("MYSQLROUTER_PASS")
+	tlsSkipVerify = os.Getenv("MYSQLROUTER_TLS_SKIP_VERIFY")
+	graphdef      map[string]mp.Graphs
 )
 
 // MRPlugin is the prefix of struct of graph
@@ -101,7 +102,12 @@ func Do() {
 			"MYSQLROUTER_URL, MYSQLROUTER_USER and MYSQLROUTER_PASS is required.")
 	}
 
-	mrr, err := mysqlrouter.New(url, user, pass)
+	var isTlsSkipVerify bool
+	if tlsSkipVerify == "true" {
+		isTlsSkipVerify = true
+	}
+
+	mrr, err := mysqlrouter.New(url, user, pass, isTlsSkipVerify)
 	if err != nil {
 		panic(err)
 	}
